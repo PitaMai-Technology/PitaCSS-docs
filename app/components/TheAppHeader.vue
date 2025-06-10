@@ -2,12 +2,12 @@
     <header class="headerContainer">
         <div class="logoContainer hide-max1250">
             <NuxtLink to="/" class="inherit-link">
-                PitaCSS(α版)
+                PitaCSS(α)
             </NuxtLink>
         </div>
         <div class="logoContainerSp hide-min1250">
             <NuxtLink to="/" class="inherit-link">
-                PitaCSS(α版)
+                PitaCSS(α)
             </NuxtLink>
         </div>
     </header>
@@ -29,7 +29,7 @@
     height: 72px;
     padding: 0 40px;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1250px) {
         padding: 0 20px;
         justify-content: flex-end;
     }
