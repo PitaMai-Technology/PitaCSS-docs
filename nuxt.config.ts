@@ -48,12 +48,9 @@ export default defineNuxtConfig({
         highlight: {
           // OR
           theme: {
-            // Default theme (same as single string)
             default: 'github-light',
-            // Theme used if `html.dark`
-            dark: 'github-dark',
-            // Theme used if `html.sepia`
-            sepia: 'monokai'
+            'data-theme-dark': 'github-dark',  // data-theme="dark" に対応
+            'prefers-color-scheme-dark': 'github-dark'  // システムダークモードに対応
           }
         },
         toc: {

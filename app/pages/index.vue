@@ -123,16 +123,6 @@ useSeoMeta({
             <p>iPadなどのタブレットにも対応するため、基本的にブレイクポイントは1250pxです。 また、多くの場合ドキュメントを読むのは"スマホ"ではなく<strong>「タブレットやPC」</strong>です。そこも考慮しました。</p>
         </section>
     </section>
-    <section>
-        <h2>対応ブラウザバージョン</h2>
-        <ul>
-            <li><font-awesome-icon icon="fa-brands fa-chrome" /> Chrome: 111+</li>
-            <li><font-awesome-icon icon="fa-brands fa-firefox" /> Firefox: 113+</li>
-            <li><font-awesome-icon icon="fa-brands fa-safari" /> Safari: 16.2+</li>
-            <li><font-awesome-icon icon="fa-brands fa-edge" /> Edge: 111+</li>
-            <li><font-awesome-icon icon="fa-brands fa-internet-explorer" /> IE11: 非対応</li>
-        </ul>
-    </section>
 </template>
 
 <style scoped>
