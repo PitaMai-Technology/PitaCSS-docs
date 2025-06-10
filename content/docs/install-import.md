@@ -1,0 +1,46 @@
+---
+date: 2025-06-10T00:00:00.000Z
+---
+
+# インストール
+
+```shell
+npm install pita-css
+```
+
+## JavaScript(インポート)
+
+JavaScript
+
+```js
+//読み込まれるもの PitaCSS.jsのみ
+import "pita-css/js";
+// もしくは
+import "pita-css";
+//読み込まれるもの PitaCSS.jsのみ
+```
+
+### CSSファイル
+
+```css
+@import "pita-css/style"
+```
+
+::block-alert{type="warning"}
+※`import "pita-css/style"`のようにJavaScript側でCSSを読み込むのは推奨しません。
+
+- レンダリングが遅れる可能性が高い
+- ビルドツールへの強い依存
+::
+
+## Vue
+
+Vue(Nuxt)
+
+```js
+onMounted(async () => {
+await import('pita-css/js')
+});
+```
+
+クライアント側でのみ実行させなければいけないため、onMountedでラップします
