@@ -30,6 +30,11 @@ useHead({
     width: 100%;
 }
 
+.shiki {
+  background-color: var(--gray-primary) !important;
+  color: var(--text-primary) !important;
+}
+
 /* ダークモード */
 [data-theme="dark"] .shiki {
   background-color: var(--gray-secondary) !important;

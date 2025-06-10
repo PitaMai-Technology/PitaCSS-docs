@@ -1,11 +1,11 @@
 <template>
     <header class="headerContainer">
-        <div class="logoContainer hide-max768">
+        <div class="logoContainer hide-max1250">
             <NuxtLink to="/" class="inherit-link">
                 PitaCSS(α版)
             </NuxtLink>
         </div>
-        <div class="logoContainerSp hide-min768">
+        <div class="logoContainerSp hide-min1250">
             <NuxtLink to="/" class="inherit-link">
                 PitaCSS(α版)
             </NuxtLink>
