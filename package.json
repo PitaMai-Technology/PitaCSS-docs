@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-content-starter",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.4.1",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@nuxt/content": "^3.5.1",
+    "@nuxt/scripts": "^0.11.7",
+    "@nuxthub/core": "0.8.27",
+    "@nuxtjs/robots": "^5.2.10",
+    "@nuxtjs/sitemap": "^7.2.10",
+    "nuxt": "^3.17.4",
+    "nuxt-seo-utils": "^7.0.12",
+    "nuxt-site-config": "^3.2.0",
+    "pita-css": "^0.2.11"
+  }
+}
