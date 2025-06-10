@@ -16,6 +16,7 @@ const { data } = await useAsyncData('navigation', () => {
         <aside>
             <!-- ナビヘッダー -->
             <div class="aside-header">
+                MIT License<br>
                 <select data-theme-select class="mT20">
                     <option value="auto">💻 システム設定</option>
                     <option value="light">☀️ ライト</option>
@@ -33,6 +34,9 @@ const { data } = await useAsyncData('navigation', () => {
                 </li>
                 <li>
                     <NuxtLink to="https://pita-css-preview.pages.dev/" target="_blank">プレビュー <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /></NuxtLink>
+                </li>
+                <li>
+                    <NuxtLink to="https://pitamai.com/" target="_blank">開発元 <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /></NuxtLink>
                 </li>
                 <li v-for="item in data" :key="item.path">
                     <NuxtLink :to="item.children && item.children.length > 0 ? '#' : item.path">{{ item.title }}</NuxtLink>
