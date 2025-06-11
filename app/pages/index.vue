@@ -15,7 +15,7 @@ useSeoMeta({
                 </div>
                 <div>
                     <h1>
-                        PitaCSS ~ ドキュメントテーションに特化
+                        PitaCSS ~ ドキュメンテーションに特化
                     </h1>
                 </div>
                 <p>
