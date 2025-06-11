@@ -22,13 +22,13 @@ useSeoMeta({
                     <code>npm install pita-css</code>
                 </p>
                 <p>
-                    ドキュメント型サイトに最適化されたClassレスベースのCSSフレームワークです。HTMLタグだけで見やすいデザインが完成し、必要に応じて低水準のユーティリティClassを段階的に追加できます。、ドキュメントサイトに便利な非依存なJavaScript機能が付属しています
+                    ドキュメント型サイトに最適化されたClassレスベースのCSSフレームワークです。HTMLタグだけで見やすいデザインが完成し、必要に応じて低水準のユーティリティClassを段階的に追加できます。ドキュメントサイトに便利な非依存なJavaScript機能が付属しています。
                 </p>
                 <ul>
                     <li>もちろんレスポンシブ</li>
                     <li>Classレス設計で、タグだけで直感的かつ分かりやすい見た目</li>
                     <li>必要に応じてユーティリティ(低水準)ClassやハイレベルClassも利用可能</li>
-                    <li>ライブラリ・フレームワーク非依存、Vue/React/バニラJSで利用OK</li>
+                    <li>ライブラリ・フレームワーク非依存、Vue/React(サポート外)/バニラJSで利用OK</li>
                     <li>日本語フォント・行間最適化、レスポンシブ文字サイズ</li>
                     <li>ほぼゼロ設定・軽量・依存関係なし</li>
                 </ul>
@@ -68,7 +68,7 @@ useSeoMeta({
         </div>
 
         <section>
-            <pre>
+            <pre class="language-html shiki shiki-themes github-dark github-light">
                 <code>
 &lt;!-- クラスレス --&gt;
 &lt;section&gt;
@@ -122,6 +122,14 @@ useSeoMeta({
             <h3>ブレイクポイント(珍しいかもしれませんが、タブレット→スマホの順番で尊重します)</h3>
             <p>iPadなどのタブレットにも対応するため、基本的にブレイクポイントは1250pxです。 また、多くの場合ドキュメントを読むのは"スマホ"ではなく<strong>「タブレットやPC」</strong>です。そこも考慮しました。</p>
         </section>
+    </section>
+    <section>
+        <h2>注意事項</h2>
+        <div class="alert warning">
+            <p>
+                現在、PitaCSSは開発初期段階であり、機能やドキュメントはまだ完全ではありません。
+            </p>
+        </div>
     </section>
 </template>
 

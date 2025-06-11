@@ -68,7 +68,7 @@ useSeoMeta({
             </ul>
         </div>
         <div v-if="page?.date">
-            <p>公開日：{{ parseDate(page.date?.toString()) }}</p>
+            <p>更新日：{{ parseDate(page.date?.toString()) }}</p>
         </div>
 
         <!-- コンテンツの表示 -->
