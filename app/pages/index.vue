@@ -11,7 +11,7 @@ useSeoMeta({
             <div class="hero-text">
                 <div class="hero-badge">
                     <span class="badge-text"><font-awesome-icon icon="fa-solid fa-book" />
-                        ドキュメントテーションに特化したCSSフレームワーク</span>
+                        ドキュメンテーションに特化したCSSフレームワーク</span>
                 </div>
                 <div>
                     <h1>
