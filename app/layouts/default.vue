@@ -10,6 +10,7 @@
             </main>
         </div>
     </div>
+    <TheAppFooter />
 </template>
 
 <script setup>

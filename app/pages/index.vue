@@ -39,8 +39,8 @@ useSeoMeta({
                     <NuxtLink to="/docs" class="btn btn-primary">
                         始める
                     </NuxtLink>
-                    <NuxtLink to="/search" class="btn btn-secondary">
-                        検索
+                    <NuxtLink to="https://github.com/otusoa/PitaCSS" target="_blank" class="btn btn-secondary">
+                        GitHub
                     </NuxtLink>
                 </div>
             </div>
