@@ -49,9 +49,9 @@ export default defineNuxtConfig({
           // OR
           theme: {
             // Default theme (same as single string)
-            default: 'github-dark',
+            default: 'github-light',
             // Theme used if `html.dark`
-            dark: 'github-light',
+            dark: 'github-dark',
           }
         },
         toc: {

@@ -13,6 +13,49 @@ onMounted(async () => {
     } else {
       htmlElement.classList.remove('dark')
     }
+
+    // GitHubテーマの切り替え
+    switchGitHubTheme(currentTheme === 'dark')
+  }
+
+  // GitHubテーマの切り替え関数
+  const switchGitHubTheme = (isDark) => {
+    // すべてのpre要素内のgithub-lightテーマをgithub-darkに変更（またはその逆）
+    const preElements = document.querySelectorAll('pre')
+    
+    preElements.forEach(pre => {
+      if (isDark) {
+        // ライトモードからダークモードへ
+        if (pre.classList.contains('github-light')) {
+          pre.classList.remove('github-light')
+          pre.classList.add('github-dark')
+        }
+        // data-theme属性での制御
+        if (pre.getAttribute('data-theme') === 'github-light') {
+          pre.setAttribute('data-theme', 'github-dark')
+        }
+      } else {
+        // ダークモードからライトモードへ
+        if (pre.classList.contains('github-dark')) {
+          pre.classList.remove('github-dark')
+          pre.classList.add('github-light')
+        }
+        // data-theme属性での制御
+        if (pre.getAttribute('data-theme') === 'github-dark') {
+          pre.setAttribute('data-theme', 'github-light')
+        }
+      }
+    })
+
+    // シンタックスハイライト用のspanやcode要素も対象に
+    const codeElements = document.querySelectorAll('code[class*="github-"], .shiki')
+    codeElements.forEach(code => {
+      if (isDark) {
+        code.className = code.className.replace(/github-light/g, 'github-dark')
+      } else {
+        code.className = code.className.replace(/github-dark/g, 'github-light')
+      }
+    })
   }
 
   // 初期同期を少し遅らせる
@@ -68,5 +111,16 @@ useHead({
 html.dark .shiki,
 html.dark .shiki span {
   color: var(--shiki-dark) !important;
+}
+
+/* GitHubテーマ用の追加スタイル */
+.github-dark {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+
+.github-light {
+  background-color: #ffffff !important;
+  color: #24292f !important;
 }
 </style>
