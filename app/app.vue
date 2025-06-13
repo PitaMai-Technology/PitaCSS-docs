@@ -158,7 +158,7 @@ useHead({
 <style>
 
 .language-text code{
-  color: var(--dark);
+  color: var(--text-primary-inverse) !important;
 }
 
 #progress {
