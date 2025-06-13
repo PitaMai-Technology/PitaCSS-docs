@@ -87,6 +87,38 @@ onMounted(async () => {
     attributeFilter: ['data-theme']
   })
 
+  // DOM変更を監視してページ遷移後のシンタックスハイライトを検出
+  const contentObserver = new MutationObserver((mutations) => {
+    let shouldSync = false
+    
+    mutations.forEach((mutation) => {
+      // 新しいpre要素やcode要素が追加された場合
+      if (mutation.type === 'childList') {
+        mutation.addedNodes.forEach((node) => {
+          if (node.nodeType === 1) { // Element node
+            const element = node as Element
+            if (element.tagName === 'PRE' || 
+                element.tagName === 'CODE' || 
+                element.querySelector('pre, code, .shiki')) {
+              shouldSync = true
+            }
+          }
+        })
+      }
+    })
+    
+    if (shouldSync) {
+      setTimeout(syncShikiTheme, 100)
+    }
+  })
+
+  // main要素またはbody全体を監視
+  const targetElement = document.querySelector('main') || document.body
+  contentObserver.observe(targetElement, {
+    childList: true,
+    subtree: true
+  })
+
   // カスタムイベントも監視
   window.addEventListener('themechange', () => {
     setTimeout(syncShikiTheme, 50)
@@ -95,6 +127,12 @@ onMounted(async () => {
   // システムのカラースキーム変更も監視
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     setTimeout(syncShikiTheme, 50)
+  })
+
+  // Nuxtのページ遷移を監視
+  const router = useRouter()
+  router.afterEach(() => {
+    setTimeout(syncShikiTheme, 200) // ページ遷移後に少し遅延を持ってテーマを同期
   })
 })
 
