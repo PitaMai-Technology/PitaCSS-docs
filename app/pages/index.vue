@@ -68,6 +68,25 @@ useSeoMeta({
         </div>
 
         <section>
+            <h2>PitaCSSの中核となる考え、段階的採用思想とは？</h2>
+            <p>
+                Classレス思想をベースとした、新しい思想です。(おそらく...)<br>
+            </p>
+            <h3>内容</h3>
+            <p>
+                すべてHTMLタグ(Classレス)だけで記述するのは柔軟性に欠けます。そこでPitaCSSは、あくまでClassレス思想をベースにしつつ、
+                「Classレス」→「低水準Class」→「ハイレベルClass」<br>
+                の順に適切なクラスを段階的に採用することで、柔軟性がありながらも、コードをシンプルに保てるという思想です！。<br>
+                <br>
+                具体的な内容はドキュメントにありますので、そちらをご覧ください。
+            </p>
+            <NuxtLink to="/docs" class="btn btn-primary fit-content">
+                思想(ドキュメント)
+            </NuxtLink>
+
+        </section>
+
+        <section>
             <pre class="language-html shiki shiki-themes github-dark github-light">
                 <code>
 &lt;!-- クラスレス --&gt;
@@ -93,9 +112,7 @@ useSeoMeta({
       &lt;p&gt;情報メッセージ&lt;/p&gt;
     &lt;/div&gt;
   &lt;/section&gt;
-&lt;/div&gt;
-                </code>
-            </pre>
+&lt;/div&gt;</code></pre>
         </section>
     </div>
     <section>
@@ -120,7 +137,8 @@ useSeoMeta({
         <p>というClassレスの思想に重きを置き、低水準Class (いわゆるユーティリティクラス)、ドキュメントサイトに必要な高度な動的な機能(JS)を足して、バランスよく内包しました。</p>
         <section>
             <h3>ブレイクポイント(珍しいかもしれませんが、タブレット→スマホの順番で尊重します)</h3>
-            <p>iPadなどのタブレットにも対応するため、基本的にブレイクポイントは1250pxです。 また、多くの場合ドキュメントを読むのは"スマホ"ではなく<strong>「タブレットやPC」</strong>です。そこも考慮しました。</p>
+            <p>iPadなどのタブレットにも対応するため、基本的にブレイクポイントは1250pxです。
+                また、多くの場合ドキュメントを読むのは"スマホ"ではなく<strong>「タブレットやPC」</strong>です。そこも考慮しました。</p>
         </section>
     </section>
     <section>
