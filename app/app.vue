@@ -6,10 +6,10 @@ onMounted(async () => {
   const syncShikiTheme = () => {
     const htmlElement = document.documentElement
     const currentTheme = htmlElement.getAttribute('data-theme')
-    
+
     // システム設定を考慮してテーマを判定
     let isDark = false
-    
+
     if (currentTheme === 'dark') {
       isDark = true
     } else if (currentTheme === 'light') {
@@ -18,7 +18,7 @@ onMounted(async () => {
       // data-theme属性がない場合はシステム設定を確認
       isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-    
+
     // より確実にクラスを操作
     if (isDark) {
       htmlElement.classList.add('dark')
@@ -34,7 +34,7 @@ onMounted(async () => {
   const switchGitHubTheme = (isDark) => {
     // すべてのpre要素内のgithub-lightテーマをgithub-darkに変更（またはその逆）
     const preElements = document.querySelectorAll('pre')
-    
+
     preElements.forEach(pre => {
       if (isDark) {
         // ライトモードからダークモードへ
@@ -90,23 +90,23 @@ onMounted(async () => {
   // DOM変更を監視してページ遷移後のシンタックスハイライトを検出
   const contentObserver = new MutationObserver((mutations) => {
     let shouldSync = false
-    
+
     mutations.forEach((mutation) => {
       // 新しいpre要素やcode要素が追加された場合
       if (mutation.type === 'childList') {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === 1) { // Element node
             const element = node
-            if (element.tagName === 'PRE' || 
-                element.tagName === 'CODE' || 
-                element.querySelector('pre, code, .shiki')) {
+            if (element.tagName === 'PRE' ||
+              element.tagName === 'CODE' ||
+              element.querySelector('pre, code, .shiki')) {
               shouldSync = true
             }
           }
         })
       }
     })
-    
+
     if (shouldSync) {
       setTimeout(syncShikiTheme, 100)
     }
@@ -137,29 +137,34 @@ onMounted(async () => {
 })
 
 useHead({
-    link: [
-        { rel: "icon", href: "/favicon.png" },
-    ],
-    htmlAttrs: {
-        lang: 'ja'
-    },
+  link: [
+    { rel: "icon", href: "/favicon.png" },
+  ],
+  htmlAttrs: {
+    lang: 'ja'
+  },
 })
 </script>
 
 <template>
-    <div>
-        <NuxtLayout>
-            <NuxtRouteAnnouncer />
-            <NuxtPage />
-        </NuxtLayout>
-    </div>
+  <div>
+    <NuxtLayout>
+      <NuxtRouteAnnouncer />
+      <NuxtPage />
+    </NuxtLayout>
+  </div>
 </template>
 
 <style>
+
+.language-text code{
+  color: var(--dark);
+}
+
 #progress {
-    height: 4px;
-    z-index: 1000;
-    width: 100%;
+  height: 4px;
+  z-index: 1000;
+  width: 100%;
 }
 
 /* より強力なセレクタで確実に適用 */
