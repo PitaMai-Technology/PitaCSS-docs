@@ -96,7 +96,7 @@ onMounted(async () => {
       if (mutation.type === 'childList') {
         mutation.addedNodes.forEach((node) => {
           if (node.nodeType === 1) { // Element node
-            const element = node as Element
+            const element = node
             if (element.tagName === 'PRE' || 
                 element.tagName === 'CODE' || 
                 element.querySelector('pre, code, .shiki')) {
