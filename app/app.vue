@@ -7,15 +7,27 @@ onMounted(async () => {
     const htmlElement = document.documentElement
     const currentTheme = htmlElement.getAttribute('data-theme')
     
-    // より確実にクラスを操作
+    // システム設定を考慮してテーマを判定
+    let isDark = false
+    
     if (currentTheme === 'dark') {
+      isDark = true
+    } else if (currentTheme === 'light') {
+      isDark = false
+    } else {
+      // data-theme属性がない場合はシステム設定を確認
+      isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+    
+    // より確実にクラスを操作
+    if (isDark) {
       htmlElement.classList.add('dark')
     } else {
       htmlElement.classList.remove('dark')
     }
 
     // GitHubテーマの切り替え
-    switchGitHubTheme(currentTheme === 'dark')
+    switchGitHubTheme(isDark)
   }
 
   // GitHubテーマの切り替え関数
@@ -77,6 +89,11 @@ onMounted(async () => {
 
   // カスタムイベントも監視
   window.addEventListener('themechange', () => {
+    setTimeout(syncShikiTheme, 50)
+  })
+
+  // システムのカラースキーム変更も監視
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
     setTimeout(syncShikiTheme, 50)
   })
 })
