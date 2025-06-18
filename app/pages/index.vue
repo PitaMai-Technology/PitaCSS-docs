@@ -3,6 +3,11 @@
 useSeoMeta({
     ogImage: "https://css.pitahex.com/ogp.png",
 })
+
+const tabsData = [
+    { title: 'npm' },
+    { title: 'pnpm' },
+]
 </script>
 
 <template>
@@ -18,9 +23,16 @@ useSeoMeta({
                         PitaCSS ~ ドキュメンテーションに特化
                     </h1>
                 </div>
-                <p>
-                    <code>npm install pita-css</code>
-                </p>
+                <div>
+                    <BlockTabs :tabs="tabsData" :default-tab="0">
+                        <template #tab-0>
+                            <p><code>npm install pita-css</code></p>
+                        </template>
+                        <template #tab-1>
+                            <p><code>pnpm install pita-css</code></p>
+                        </template>
+                    </BlockTabs>
+                </div>
                 <p>
                     ドキュメント型サイトに最適化されたClassレスベースのCSSフレームワークです。HTMLタグだけで見やすいデザインが完成し、必要に応じて低水準のユーティリティClassを段階的に追加できます。ドキュメントサイトに便利な非依存なJavaScript機能が付属しています。
                 </p>
@@ -53,8 +65,8 @@ useSeoMeta({
             <div class="stat">
                 <div class="stat-number">軽量(CSS) <font-awesome-icon icon="fa-solid fa-feather-pointed" /></div>
                 <div class="stat-label">
-                    40KB未満<br>
-                    <small>gzip: 7KB</small>
+                    30KB未満<br>
+                    <small>gzip: 6KB未満</small>
                 </div>
             </div>
             <div class="stat">
@@ -151,7 +163,14 @@ useSeoMeta({
     </section>
 </template>
 
+<style>
+.tabs-content{
+    min-height: fit-content !important;
+}
+</style>
+
 <style scoped>
+
 button {
     color: white;
 }

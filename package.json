@@ -22,6 +22,6 @@
     "nuxt": "^3.17.4",
     "nuxt-seo-utils": "^7.0.12",
     "nuxt-site-config": "^3.2.0",
-    "pita-css": "^0.3.20"
+    "pita-css": "^0.4.1"
   }
 }
