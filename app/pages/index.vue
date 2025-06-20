@@ -29,7 +29,7 @@ const tabsData = [
                             <p><code>npm install pita-css</code></p>
                         </template>
                         <template #tab-1>
-                            <p><code>pnpm install pita-css</code></p>
+                            <p><code>pnpm add pita-css</code></p>
                         </template>
                     </BlockTabs>
                 </div>
