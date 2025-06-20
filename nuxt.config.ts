@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-06-10',
 
   css: [
+    "pita-css/style-base",
     "pita-css/style",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
