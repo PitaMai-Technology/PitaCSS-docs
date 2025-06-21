@@ -15,8 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Install Node.js
         uses: actions/setup-node@v4
@@ -27,14 +29,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Ensure NuxtHub module is installed
-        run: npx nuxthub@latest ensure
-
-      - name: Build application
-        run: pnpm run build
-
-      - name: Deploy to NuxtHub
-        uses: nuxt-hub/action@v1
+      - name: Build & Deploy to NuxtHub
+        uses: nuxt-hub/action@v2
         id: deploy
         with:
           project-key: pita-css-docs-h0wb
+
