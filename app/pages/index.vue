@@ -49,10 +49,15 @@ const tabsData = [
                 </p>
                 <div class="hero-actions">
                     <NuxtLink to="/docs" class="btn btn-primary">
-                        始める
+                        <font-awesome-icon icon="fa-solid fa-play" /> 始める
                     </NuxtLink>
                     <NuxtLink to="https://github.com/otusoa/PitaCSS" target="_blank" class="btn btn-secondary">
-                        GitHub
+                        <font-awesome-icon icon="fa-brands fa-github" /> GitHub
+                    </NuxtLink>
+                </div>
+                <div class="hero-actions">
+                    <NuxtLink to="https://discord.gg/rf3et8MhKh" target="_blank" class="btn btn-primary">
+                        <font-awesome-icon icon="fa-brands fa-discord" /> Discord
                     </NuxtLink>
                 </div>
             </div>
@@ -100,31 +105,32 @@ const tabsData = [
 
         <section>
             <pre class="language-html shiki shiki-themes github-dark github-light">
-                <code>
-&lt;!-- クラスレス --&gt;
-&lt;section&gt;
-  &lt;h1&gt;PitaCSS&lt;/h1&gt;
-  &lt;p&gt;ドキュメント型サイトに特化したCSSフレームワーク&lt;/p&gt;
-&lt;/section&gt;
+        <code>
+            &lt;!-- クラスレス --&gt;
+            &lt;section&gt;
+            &lt;h1&gt;PitaCSS&lt;/h1&gt;
+            &lt;p&gt;ドキュメント型サイトに特化したCSSフレームワーク&lt;/p&gt;
+            &lt;/section&gt;
 
-&lt;!-- 段階的にユーティリティClass（低水準クラス）を利用する --&gt;
-&lt;div class="p20 mB20"&gt;
-  &lt;p class="text-xs mB10"&gt;text-xs: とても小さいテキスト(13px固定)&lt;/p&gt;
-  &lt;p class="text-sm mB10"&gt;text-sm: 小さいテキスト(15px固定)&lt;/p&gt;
-  &lt;p class="text-base mB10"&gt;text-base: 基本サイズのテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
-  &lt;p class="text-lg mB10"&gt;text-lg: 大きいテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
-  &lt;p class="text-xl mB10"&gt;text-xl: より大きいテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
-  &lt;p class="text-2xl mB10"&gt;text-2xl: 最大サイズのテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
-&lt;/div&gt;
+            &lt;!-- 段階的にユーティリティClass（低水準クラス）を利用する --&gt;
+            &lt;div class="p20 mB20"&gt;
+            &lt;p class="text-xs mB10"&gt;text-xs: とても小さいテキスト(13px固定)&lt;/p&gt;
+            &lt;p class="text-sm mB10"&gt;text-sm: 小さいテキスト(15px固定)&lt;/p&gt;
+            &lt;p class="text-base mB10"&gt;text-base: 基本サイズのテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
+            &lt;p class="text-lg mB10"&gt;text-lg: 大きいテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
+            &lt;p class="text-xl mB10"&gt;text-xl: より大きいテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
+            &lt;p class="text-2xl mB10"&gt;text-2xl: 最大サイズのテキスト(Clamp関数によりレスポンシブです)&lt;/p&gt;
+            &lt;/div&gt;
 
-  &lt;!-- 必要に応じてハイレベルClass --&gt;
-  &lt;section&gt;
-    &lt;h2&gt;alertシリーズ&lt;/h2&gt;
-    &lt;div class="alert info"&gt;
-      &lt;p&gt;情報メッセージ&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/section&gt;
-&lt;/div&gt;</code></pre>
+            &lt;!-- 必要に応じてハイレベルClass --&gt;
+            &lt;section&gt;
+            &lt;h2&gt;alertシリーズ&lt;/h2&gt;
+            &lt;div class="alert info"&gt;
+            &lt;p&gt;情報メッセージ&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;/section&gt;
+            &lt;/div&gt;</code>
+    </pre>
         </section>
     </div>
     <section>
@@ -164,13 +170,12 @@ const tabsData = [
 </template>
 
 <style>
-.tabs-content{
+.tabs-content {
     min-height: fit-content !important;
 }
 </style>
 
 <style scoped>
-
 button {
     color: white;
 }

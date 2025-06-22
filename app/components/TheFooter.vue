@@ -13,6 +13,9 @@
                 <li>
                     <NuxtLink to="/disclaimer">免責事項</NuxtLink>
                 </li>
+                <li>
+                    <NuxtLink to="https://discord.gg/rf3et8MhKh" target="_blank">Discordサーバー</NuxtLink>
+                </li>
             </ul>
         </div>
     </footer>
