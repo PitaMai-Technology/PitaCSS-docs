@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import Fuse from 'fuse.js'
 
 const query = ref('')
