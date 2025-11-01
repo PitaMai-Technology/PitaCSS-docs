@@ -6,7 +6,7 @@
             <h2>リンク</h2>
             <ul>
                 <li><NuxtLink href="https://github.com/otusoa/PitaCSS/issues" target="_blank">問題報告</NuxtLink></li>
-                <li><NuxtLink href="https://pitamai.com/organization/privacyPolicy" target="_blank">プライバシーポリシー</NuxtLink></li>
+                <li><NuxtLink href="https://pitamai.com/organization/privacy-policy" target="_blank">プライバシーポリシー</NuxtLink></li>
             </ul>
         </div>
         <small>

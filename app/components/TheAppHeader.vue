@@ -2,12 +2,12 @@
     <header>
         <div class="logo-container hide-max1250">
             <NuxtLink to="/" class="inherit-link logo-text">
-                PitaCSS(α)
+                PitaCSS(beta)
             </NuxtLink>
         </div>
         <div class="logo-container-responsive hide-min1250">
             <NuxtLink to="/" class="inherit-link logo-text">
-                PitaCSS(α)
+                PitaCSS(beta)
             </NuxtLink>
         </div>
     </header>

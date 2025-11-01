@@ -14,16 +14,16 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/vue-fontawesome": "^3.0.8",
-    "@nuxt/content": "^3.6.1",
-    "@nuxt/scripts": "^0.11.7",
+    "@fortawesome/vue-fontawesome": "^3.1.2",
+    "@nuxt/content": "^3.8.0",
+    "@nuxt/scripts": "^0.11.13",
     "@nuxthub/core": "0.8.27",
-    "@nuxtjs/robots": "^5.2.10",
-    "@nuxtjs/sitemap": "^7.2.10",
-    "better-sqlite3": "^11.10.0",
-    "nuxt": "^3.17.4",
-    "nuxt-seo-utils": "^7.0.12",
-    "nuxt-site-config": "^3.2.0",
-    "pita-css": "^0.5.0"
+    "@nuxtjs/robots": "^5.5.6",
+    "@nuxtjs/sitemap": "^7.4.7",
+    "better-sqlite3": "^12.4.1",
+    "nuxt": "^3.20.0",
+    "nuxt-seo-utils": "^7.0.18",
+    "nuxt-site-config": "^3.2.11",
+    "pita-css": "^0.6.2"
   }
 }
