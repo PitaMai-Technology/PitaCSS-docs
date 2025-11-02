@@ -1,6 +1,17 @@
 <script setup>
+
 onMounted(async () => {
-  await import('pita-css/js')
+  const { ProgressLoader } = await import('pita-css/ts')
+
+  window.progressLoader?.destroy();
+  window.progressLoader = new ProgressLoader({
+    height: '6px',
+    color: '#87cc5c',
+    zIndex: 2000,
+  });
+});
+
+onMounted(async () => {
 
   // PitaCSSのテーマとshikiテーマを同期
   const syncShikiTheme = () => {
@@ -134,18 +145,8 @@ onMounted(async () => {
   router.afterEach(() => {
     setTimeout(syncShikiTheme, 200) // ページ遷移後に少し遅延を持ってテーマを同期
   })
-
-  const loader = new ProgressLoader({
-  minDuration: 1000,        // 最小表示時間（ミリ秒）
-  estimatedDuration: 3000,  // 推定読み込み時間（ミリ秒）
-  height: '5px',            // プログレスバーの高さ
-  color: '#ff0000',         // プログレスバーの色
-  zIndex: 2000,             // z-indexの値
-  animationSpeed: 20        // アニメーション速度（ミリ秒）
 });
 
-console.log(loader)
-})
 
 useHead({
   link: [
