@@ -48,8 +48,8 @@ importers:
         specifier: ^3.2.11
         version: 3.2.11(h3@1.15.4)(magicast@0.5.1)(vue@3.5.22(typescript@5.9.3))
       pita-css:
-        specifier: ^0.6.2
-        version: 0.6.2
+        specifier: ^0.6.4
+        version: 0.6.4
 
 packages:
 
@@ -3084,8 +3084,8 @@ packages:
     resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
     engines: {node: '>=12'}
 
-  pita-css@0.6.2:
-    resolution: {integrity: sha512-8zpdwpx8qYi3GhLtFMCXpd2H/KbXQf/W0wr63YnRVhgLBiXR0Vl6TRRNCooHhDKSKqshHw4YpRbmFlvwMGBv+g==}
+  pita-css@0.6.4:
+    resolution: {integrity: sha512-GP0OuFqoenIZqvg6a8+Cm5W2F3ZfBmfn6/Rcc5Noo5w7Qb8Kl+njgdN7CU8hXuoUkospkEauO0WRFja5BRTP+Q==}
 
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
@@ -8175,7 +8175,7 @@ snapshots:
 
   picomatch@4.0.3: {}
 
-  pita-css@0.6.2: {}
+  pita-css@0.6.4: {}
 
   pkg-types@1.3.1:
     dependencies:
