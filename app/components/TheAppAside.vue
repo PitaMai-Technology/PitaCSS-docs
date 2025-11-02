@@ -33,7 +33,7 @@ const { data } = await useAsyncData('navigation', () => {
                     <NuxtLink to="/search">検索</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink to="https://pita-css-preview.pages.dev/" target="_blank">プレビュー <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /></NuxtLink>
+                    <NuxtLink to="https://pita-css-preview.pitahex.com/" target="_blank">プレビュー <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /></NuxtLink>
                 </li>
                 <li>
                     <NuxtLink to="https://pitamai.com/" target="_blank">開発元 <font-awesome-icon icon="fa-solid fa-arrow-up-right-from-square" /></NuxtLink>
