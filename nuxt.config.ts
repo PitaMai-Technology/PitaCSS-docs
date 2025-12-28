@@ -32,7 +32,7 @@ export default defineNuxtConfig({
       branch: 'main',
     },
     i18n: {
-      defaultLocale: 'en' // 'en', 'fr' or 'de'
+      defaultLocale: 'jp' // 'en', 'fr' or 'de'
     }
   },
 
