@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     'nuxt-site-config',
     '@nuxt/content',
-    "@nuxthub/core",
     '@nuxtjs/robots',
     'nuxt-studio'
   ],
