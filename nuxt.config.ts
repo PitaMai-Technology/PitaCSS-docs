@@ -31,9 +31,6 @@ export default defineNuxtConfig({
       repo: 'PitaCSS-docs',
       branch: 'main',
     },
-    i18n: {
-      defaultLocale: 'jp' // 'en', 'fr' or 'de'
-    }
   },
 
   nitro: {
