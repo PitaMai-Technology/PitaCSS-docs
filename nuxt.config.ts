@@ -30,10 +30,9 @@ export default defineNuxtConfig({
       owner: 'PitaMai-Technology',
       repo: 'PitaCSS-docs',
       branch: 'main',
-      private: false,
     },
     i18n: {
-      defaultLocale: 'jp' // 'en', 'fr' or 'de'
+      defaultLocale: 'en' // 'en', 'fr' or 'de'
     }
   },
 
