@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   studio: {
     repository: {
       provider: 'github', // 'github' or 'gitlab'
-      owner: 'otusoa',
+      owner: 'PitaMai-Technology',
       repo: 'PitaCSS-docs',
       branch: 'main'
     }
