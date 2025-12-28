@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     "@nuxthub/core",
     '@nuxtjs/robots',
+    'nuxt-studio'
   ],
 
   devtools: { enabled: true },
@@ -24,8 +25,23 @@ export default defineNuxtConfig({
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
 
+  studio: {
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'PitaMai-Technology',
+      repo: 'PitaCSS-docs',
+      branch: 'main'
+    }
+  },
+
   nitro: {
-    preset: 'cloudflare_pages',
+    preset: 'vercel',
+    prerender: {
+      // Pre-render the homepage
+      routes: ['/'],
+      // Then crawl all the links on the page
+      crawlLinks: true
+    }
   },
 
   scripts: {
@@ -37,13 +53,6 @@ export default defineNuxtConfig({
   },
 
   content: {
-    database: {
-      type: 'd1',
-      bindingName: 'DB'
-    },
-    preview: {
-      api: 'https://api.nuxt.studio'
-    },
     build: {
       markdown: {
         highlight: {
@@ -61,10 +70,6 @@ export default defineNuxtConfig({
         }
       }
     }
-  },
-
-  hub: {
-    database: true
   },
 
   sitemap: {
